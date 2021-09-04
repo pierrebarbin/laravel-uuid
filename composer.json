@@ -1,24 +1,25 @@
 {
-    "name": "vendor_slug/package_slug",
-    "description": ":package_description",
+    "name": "pierrebarbin/laravel-uuid",
+    "description": "Laravel eloquent uuid implementation",
     "keywords": [
-        ":vendor_name",
+        "pierrebarbin",
         "laravel",
-        "package_slug"
+        "laravel-uuid"
     ],
-    "homepage": "https://github.com/vendor_slug/package_slug",
+    "homepage": "https://github.com/pierrebarbin/laravel-uuid",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Pierre",
+            "email": "pierre@glanum.com",
             "role": "Developer"
         }
     ],
     "require": {
-        "php": "^8.0",
-        "spatie/laravel-package-tools": "^1.4.3",
-        "illuminate/contracts": "^8.37"
+        "php": "^7.3|^8.0",
+        "illuminate/contracts": "^8.37",
+        "ramsey/uuid": "^4.2",
+        "spatie/laravel-package-tools": "^1.4.3"
     },
     "require-dev": {
         "brianium/paratest": "^6.2",
@@ -30,13 +31,12 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories"
+            "PierreBarbin\\Uuid\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "PierreBarbin\\Uuid\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -50,11 +50,8 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
-            ],
-            "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\SkeletonFacade"
-            }
+                "PierreBarbin\\Uuid\\UuidServiceProvider"
+            ]
         }
     },
     "minimum-stability": "dev",
