@@ -2,7 +2,6 @@
 
 namespace PierreBarbin\Uuid\Tests;
 
-use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
 use PierreBarbin\Uuid\UuidServiceProvider;
 

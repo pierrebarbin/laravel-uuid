@@ -2,7 +2,6 @@
 
 namespace PierreBarbin\Uuid\Commands;
 
-use Composer\Autoload\ClassLoader;
 use Illuminate\Foundation\Console\ModelMakeCommand;
 
 class UuidCommand extends ModelMakeCommand

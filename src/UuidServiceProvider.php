@@ -3,9 +3,9 @@
 namespace PierreBarbin\Uuid;
 
 use Illuminate\Filesystem\Filesystem;
+use PierreBarbin\Uuid\Commands\UuidCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use PierreBarbin\Uuid\Commands\UuidCommand;
 
 class UuidServiceProvider extends PackageServiceProvider
 {
