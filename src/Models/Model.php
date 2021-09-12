@@ -21,13 +21,11 @@ abstract class Model extends BaseModel
      */
     public $incrementing = false;
 
-    protected static function boot()
+    public function __construct(array $attributes = [])
     {
-        parent::boot();
+        parent::__construct($attributes);
 
-        static::creating(function (Model $model) {
-            $model->setUuid();
-        });
+        $this->setUuidWhenKeyHasNotBeenSet();
     }
 
     /**
@@ -40,8 +38,22 @@ abstract class Model extends BaseModel
         return config('uuid.version', '4');
     }
 
+    public function keyHasBeenSet(): bool
+    {
+        return ($this->attributes[$this->getKeyName()] ?? null) !== null;
+    }
+
     public function setUuid()
     {
         $this->attributes[$this->getKeyName()] = Uuid::make($this->uuidVersion());
+    }
+
+    public function setUuidWhenKeyHasNotBeenSet()
+    {
+        if ($this->keyHasBeenSet()) {
+            return;
+        }
+
+        $this->setUuid();
     }
 }
