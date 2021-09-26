@@ -1,11 +1,12 @@
 <?php
 
+
 namespace PierreBarbin\Uuid\Models;
 
-use Illuminate\Database\Eloquent\Model as BaseModel;
 use PierreBarbin\Uuid\Traits\HasUuid;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
-abstract class Model extends BaseModel
+abstract class User extends Authenticatable
 {
     use HasUuid;
 
