@@ -1,6 +1,5 @@
 <?php
 
-
 namespace PierreBarbin\Uuid\Traits;
 
 use PierreBarbin\Uuid\Uuid;

@@ -1,10 +1,9 @@
 <?php
 
-
 namespace PierreBarbin\Uuid\Models;
 
-use PierreBarbin\Uuid\Traits\HasUuid;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use PierreBarbin\Uuid\Traits\HasUuid;
 
 abstract class User extends Authenticatable
 {
